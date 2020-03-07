@@ -1,0 +1,137 @@
+@media only screen and (min-width:700px) {
+  #App {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 30%;
+    background-color: #ccccff;
+    margin-right: 30%;
+    border: 7px #282c34 double;
+    box-shadow: 10px 10px 16px rgb(37, 1, 63);
+  }
+}
+
+@media only screen and (max-width:700px) {
+  #App {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin: 0% 3%;
+    background-color: #ccccff;
+    border: 7px #282c34 double;
+    box-shadow: 10px 10px 16px rgb(37, 1, 63);
+  }
+}
+
+
+
+#input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+body {
+  background-image: url('./asserts/Amoy-MenuBar-bg.jpg');
+}
+
+input {
+  outline: none;
+}
+
+select {
+  outline: none;
+}
+
+.AppBar {
+  position: static;
+  color: white;
+}
+
+#title {
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  from {
+    color: white;
+  }
+
+  to {
+    color: #cc99ff;
+  }
+}
+
+.Units {
+  border: unset;
+  border-bottom: 2px solid cornflowerblue;
+  margin-bottom: 10%;
+  margin-top: 0%;
+  color: black;
+  height: 45px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  background-color: white;
+  font-style: italic;
+}
+
+.TextField {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  height: 41px;
+  width: 9%;
+  min-width: 4px;
+  border-top: thin;
+  border-bottom: 2px solid cornflowerblue;
+  color: black;
+  background-color: white;
+  font-size: 16px;
+  width: ;
+  margin-left: 10%;
+}
+
+select:hover {
+  background-color: rgb(223, 215, 215);
+}
+
+input:hover {
+  background-color: rgb(223, 215, 215);
+}
+
+#unit1Input {
+  border-right: thin;
+  border-left: thin;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 3%;
+}
+
+#unit2Input {
+  border-right: thin;
+  border-left: thin;
+  margin-right: 0%;
+  margin-left: 10%;
+  margin-bottom: 3%;
+}
+
+#title {
+  text-align: center;
+  align-items: center;
+}
+
+#unitType {
+  width: 55%;
+  margin: 10%;
+}
+
+#unitValue1 {
+  margin-left: 0%;
+  width: max-content;
+}
+
+#unitValue2 {
+  margin-left: 0%;
+  width: max-content;
+}
