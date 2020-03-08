@@ -13,17 +13,18 @@ export default class TextField extends Component {
   };
 
   changeValue1 = async event => {
-    await this.setState({ value1: event.target.value });
+    await this.setState({ value1: event.target.value, value2: 0 });
     this.convertValue();
   };
 
   changeValue2 = async event => {
-    await this.setState({ value2: event.target.value });
+    await this.setState({ value2: event.target.value, value1: 0 });
     this.convertValue();
   };
 
   convertValue = () => {
     if (this.state.value1 === 0) {
+      console.log("Inside value1 0")
       return getValueConverted(
         this.state.value1,
         this.state.unit1,
@@ -33,6 +34,7 @@ export default class TextField extends Component {
         this.setState({ value1: res.data });
       });
     }
+    console.log("Inside value2 0")
     return getValueConverted(
       this.state.value2,
       this.state.unit2,
@@ -46,16 +48,18 @@ export default class TextField extends Component {
   setUnit1 = async event => {
     await this.setState({ unit1: event.target.value });
     this.convertValue();
+    console.log("Request --> " + JSON.stringify(this.state))
   };
 
   setUnit2 = async event => {
     await this.setState({ unit2: event.target.value });
     this.convertValue();
+    console.log("Request --> " + JSON.stringify(this.state))
   };
 
   handleUpdatedUnit(value) {
     this.setState({ unit1: value, unit2: value });
-    console.log(this.state);
+    console.log("Update --> " + JSON.stringify(this.state))
   }
 
   render() {
@@ -83,7 +87,7 @@ export default class TextField extends Component {
             value={this.state.value2}
             onFocus={event => this.setState({ value1: "0", value2: "" })}
             onBlur={event =>
-              this.state.value2 === "" ? this.setState({ value2: 0 }) : null
+                this.state.value2 === "" ? this.setState({value2: 0}) : null
             }
           />
           <UnitValue func={this.setUnit2}>{this.props.children}</UnitValue>

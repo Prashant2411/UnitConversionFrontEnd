@@ -16,4 +16,5 @@ function getValueConverted(value1, unit1, value2, unit2) {
     ]
   });
 }
-export default getValueConverted;
+
+export default getValueConverted

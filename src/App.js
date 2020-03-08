@@ -1,18 +1,17 @@
 import React from "react";
 import "./App.css";
 import ButtonAppBar from "./comp/Topbar";
-import UnitTypeDropDown from './comp/UnitType'
+import UnitTypes from './comp/UnitType'
 
 function App() {
   return (
     <body>
       <div>
-        <ButtonAppBar></ButtonAppBar>
+        <ButtonAppBar/>
       </div>
       <div>
       <div id="App">
-          <UnitTypeDropDown
-          ></UnitTypeDropDown>
+          <UnitTypes/>
         </div>
       </div>
     </body>
